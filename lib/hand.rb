@@ -1,8 +1,7 @@
 require_relative "card"
 
 class Hand
-    # attr_writer :cards_in_hand
-    attr_reader :value
+    attr_reader :value, :cards_in_hand
     def initialize(dealt_hand)
         @cards_in_hand = dealt_hand
         @value = 0

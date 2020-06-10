@@ -1,5 +1,5 @@
 class Card
-attr_accessor :rank, :suit, :value
+attr_reader :rank, :suit, :value
   def initialize(rank, suit)
     @rank = rank
     @suit = suit
@@ -26,3 +26,6 @@ attr_accessor :rank, :suit, :value
   # - attribute readers
   # - any other methods you deem necessary
 end
+
+# Suit must be on of these: ['♦', '♣', '♠', '♥']
+# value should always be between 2 - 14
