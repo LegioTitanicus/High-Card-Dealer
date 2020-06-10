@@ -2,8 +2,10 @@ require_relative "card"
 
 class Hand
     # attr_writer :cards_in_hand
+    attr_reader :value
     def initialize(dealt_hand)
         @cards_in_hand = dealt_hand
+        @value = 0
     end
 
     def display_hand
@@ -11,6 +13,13 @@ class Hand
         @cards_in_hand.each { |card| display_string += "#{card.rank}#{card.suit} "}
         display_string
     end
+
+    def calc_hand_value
+        @cards_in_hand.each { |card| @value += card.value }
+        @value
+    end
+
+
 end
 
 

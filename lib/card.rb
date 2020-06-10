@@ -3,7 +3,7 @@ attr_accessor :rank, :suit, :value
   def initialize(rank, suit)
     @rank = rank
     @suit = suit
-    @value = value()
+    @value = value
   end 
 
   def value

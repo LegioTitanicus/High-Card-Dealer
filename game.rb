@@ -25,10 +25,27 @@ player_2 = Hand.new(deck.deal)
 puts "Player 1 was dealt #{player_1.display_hand}"
 puts "Player 2 was dealt #{player_2.display_hand}"
 
-binding.pry
+# binding.pry
 # print each players Hand to the console
 
+player_1.calc_hand_value
+player_2.calc_hand_value
 
+puts "Player 1's hand value: #{player_1.value}"
+puts "Player 2's hand value: #{player_2.value}"
+
+# binding.pry
+def outcome(player_1, player_2)
+    if player_1.value == player_2.value
+        return "Game is a TIE!"
+    elsif player_1.value > player_2.value
+        return "Player 1 wins the game!"
+    else 
+        return "Player 2 wins the game!"
+    end 
+end 
+
+puts outcome(player_1, player_2)
 # calculate the value (integer) of each (players) Hand using the Card class
 # print each players Hand value
 # compare each players Hand value to determine who wins/tie
